@@ -10,12 +10,12 @@ const users = [
         email: 'vlad.zimin1@gmail.com'
     },
     {
-        name: 'Vladislav',
+        name: 'Vladislv',
         age: 42,
         email: 'vlad.zimin1@gmail.com'
     },
     {
-        name: 'Vladislav',
+        name: 'Vladislv',
         age: 65,
         email: 'vlad.zimin1@gmail.com'
     }
@@ -43,4 +43,12 @@ const myMap = (arr, fn) => {
 
 console.log(myMap(users, u => u.age))
 
+
+const myFind = (arr, fn) => {
+    for (let i = 0; i < arr.length; i++) {
+        if (fn(arr[i]) === true) return arr[i]
+    }
+}
+
+console.log(myFind(users, u => u.name === 'Vladislv'))
 
