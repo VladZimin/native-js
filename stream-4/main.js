@@ -3,12 +3,12 @@ const todoListID_2 = 'gefgd'
 
 const todoLists = [
     {
-        id : todoListID_1,
+        id: todoListID_1,
         title: 'What to do!',
         filter: 'all'
     },
     {
-        id : todoListID_2,
+        id: todoListID_2,
         title: 'What to buy!',
         filter: 'all'
     }
@@ -29,7 +29,7 @@ const tasks = {
 
 console.log(tasks[todoListID_2][1].title)
 
-const arr = [1,2,3,4,5]
+const arr = [1, 2, 3, 4, 5]
 
 console.log(arr.reduce((acc, num) => acc + num))
 console.log(todoLists.reduce((acc, obj) => {
