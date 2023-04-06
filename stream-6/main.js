@@ -149,10 +149,6 @@ console.log(scoresSum)
 // значением которого является массив имён всех остальных студентов из массива students,
 // за исключением собственного имени студента. Т.е. в друзьях у Боба Боба быть не должно.
 const addFriends = (students) => {
-    const deepCopy = students.map(obj => ({...obj, friends: []}))
-    for (let i = 0; i < students.length; i++) {
-        deepCopy[i].friends = deepCopy.map(obj => obj.name).filter(name => name !== deepCopy[i].name)
-    }
-    return deepCopy
+    return students.map(obj => ({...obj, friends: [students.map(obj => obj.name).filter(name => name !== obj.name)]}))
 }
 console.log(addFriends(students))
